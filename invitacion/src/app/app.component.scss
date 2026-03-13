@@ -1,0 +1,21 @@
+.inv {
+  position: relative;
+  z-index: 10;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 70px 44px 100px;
+  text-align: center;
+}
+.corner {
+  position: fixed;
+  font-size: 20px;
+  color: var(--blue-pale);
+  opacity: .22;
+  &.c-tl { top: 20px; left: 22px; }
+  &.c-tr { top: 20px; right: 22px; }
+  &.c-bl { bottom: 20px; left: 22px; }
+  &.c-br { bottom: 20px; right: 22px; }
+}
+@media (max-width: 600px) {
+  .inv { padding: 40px 18px 80px; }
+}

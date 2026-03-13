@@ -1,0 +1,5 @@
+.footer-s { margin-top:64px; padding-top:32px; border-top:1px solid rgba(168,197,224,.1); }
+.ft-deco  { font-family:'Cinzel',serif; font-size:11px; color:var(--blue-pale); opacity:.3; letter-spacing:10px; margin-bottom:16px; }
+.ft-note  { font-family:'Cormorant Garamond',serif; font-size:20px; font-style:italic; color:var(--white-warm); opacity:.6; margin-bottom:12px; }
+.ft-hearts { font-size:14px; color:var(--blue-pale); opacity:.38; letter-spacing:10px; animation:hb 2.5s ease-in-out infinite; }
+@keyframes hb { 0%,100% { transform:scale(1); } 50% { transform:scale(1.15); } }

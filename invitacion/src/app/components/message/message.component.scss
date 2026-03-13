@@ -1,0 +1,6 @@
+.msg-s { position:relative; padding:40px 48px; border-left:1px solid rgba(168,197,224,.14); border-right:1px solid rgba(168,197,224,.14); margin:40px 0; }
+.qm { font-family:'Cormorant Garamond',serif; font-size:72px; color:var(--blue-pale); opacity:.16; line-height:.5; height:36px; display:block; }
+.qm.cl { text-align:right; }
+.msg-t { font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:300; line-height:2; color:var(--white-warm); font-style:italic; max-width:520px; margin:0 auto; letter-spacing:.3px; }
+.msg-t em { color:var(--blue-pale); font-style:normal; font-weight:600; }
+@media (max-width:600px) { .msg-s { padding:28px 14px; } }

@@ -1,0 +1,38 @@
+<section class="gall-s">
+  <div class="sec-title">Nuestra Historia en Fotos</div>
+
+  <div class="gall-main" (click)="next()">
+    @for (slide of wedding.photos; track $index) {
+      <div class="slide" [class.on]="current() === $index"
+           [style.backgroundImage]="slide.imageUrl ? 'url(' + slide.imageUrl + ')' : ''">
+        <div class="slide-deco">{{ slide.icon }}</div>
+        <span class="slide-lbl">{{ slide.label }}</span>
+      </div>
+    }
+    <div class="gall-nav">
+      <button class="nav-b" (click)="$event.stopPropagation(); prev()">&#8249;</button>
+      <button class="nav-b" (click)="$event.stopPropagation(); next()">&#8250;</button>
+    </div>
+  </div>
+
+  <!-- Thumbnails -->
+  <div class="thumbs">
+    @for (slide of wedding.photos; track $index) {
+      <div class="thumb" [class.on]="current() === $index" (click)="go($index)">
+        <span class="th-n">{{ $index + 1 }}</span>
+      </div>
+    }
+  </div>
+
+  <!-- Dots -->
+  <div class="dots">
+    @for (slide of wedding.photos; track $index) {
+      <div class="dot" [class.on]="current() === $index" (click)="go($index)"></div>
+    }
+  </div>
+
+  <div class="photo-tip">
+    <strong>💡 Tip:</strong> Añade <code>imageUrl: 'assets/fotos/foto1.jpg'</code>
+    en cada slide dentro de <code>WeddingService</code>.
+  </div>
+</section>

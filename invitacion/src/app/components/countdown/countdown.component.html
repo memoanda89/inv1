@@ -1,0 +1,15 @@
+<section class="cd-s">
+  <div class="cd-ttl">Faltan...</div>
+  <div class="cd-grid">
+    <div class="cd-box"><div class="cd-num">{{ days() }}</div><div class="cd-lbl">Días</div></div>
+    <div class="cd-sep">:</div>
+    <div class="cd-box"><div class="cd-num">{{ hours() }}</div><div class="cd-lbl">Horas</div></div>
+    <div class="cd-sep">:</div>
+    <div class="cd-box"><div class="cd-num">{{ minutes() }}</div><div class="cd-lbl">Min</div></div>
+    <div class="cd-sep">:</div>
+    <div class="cd-box">
+      <div class="cd-num" [class.tick]="tick()">{{ seconds() }}</div>
+      <div class="cd-lbl">Seg</div>
+    </div>
+  </div>
+</section>

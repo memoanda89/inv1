@@ -1,0 +1,17 @@
+.gifts-s { margin:48px 0; }
+.sec-title { font-family:'Cinzel',serif; font-size:11px; letter-spacing:6px; color:var(--blue-pale); opacity:.55; text-transform:uppercase; margin-bottom:28px; }
+.gifts-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr)); gap:16px; margin-bottom:20px; }
+.gift-card { padding:28px 20px; background:var(--frost); border:1px solid var(--frost-b); position:relative; overflow:hidden; cursor:pointer; transition:transform .4s cubic-bezier(.16,1,.3,1), border-color .3s, box-shadow .3s; text-align:center; }
+.gift-card::before { content:''; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,rgba(168,197,224,.38),transparent); }
+.gift-card:hover { transform:translateY(-6px); border-color:rgba(168,197,224,.32); box-shadow:0 20px 40px rgba(13,17,35,.5); }
+.gift-icon { font-size:30px; margin-bottom:12px; display:block; }
+.gift-name { font-family:'Cinzel',serif; font-size:10px; letter-spacing:3px; color:var(--blue-pale); text-transform:uppercase; margin-bottom:8px; }
+.gift-desc { font-family:'Cormorant Garamond',serif; font-size:14px; font-style:italic; color:var(--grey-soft); line-height:1.5; }
+.gift-link { display:inline-block; margin-top:14px; font-family:'Cinzel',serif; font-size:9px; letter-spacing:2px; color:var(--blue-pale); border-bottom:1px solid rgba(168,197,224,.3); padding-bottom:2px; text-transform:uppercase; }
+.gifts-note { font-family:'Cormorant Garamond',serif; font-size:16px; font-style:italic; color:var(--grey-soft); opacity:.7; margin-top:8px; }
+.acct-modal { margin-top:20px; padding:20px 24px; background:rgba(45,90,142,.14); border:1px solid rgba(168,197,224,.22); animation:scIn .4s ease; }
+.acct-ttl { font-family:'Cinzel',serif; font-size:10px; letter-spacing:3px; color:var(--blue-pale); margin-bottom:12px; }
+.acct-row { font-family:'Cormorant Garamond',serif; font-size:15px; color:var(--white-warm); line-height:2; }
+.acct-row strong { color:var(--blue-pale); }
+@keyframes scIn { from { transform:scale(.5); opacity:0; } to { transform:scale(1); opacity:1; } }
+@media (max-width:600px) { .gifts-grid { grid-template-columns:1fr 1fr; } }
