@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "wedding-invitation": {
+    "invitacion": {
       "projectType": "application",
       "root": "",
       "sourceRoot": "src",
@@ -11,7 +11,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/wedding-invitation",
+            "outputPath": "dist/invitacion",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -31,8 +31,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
-            "production":  { "buildTarget": "wedding-invitation:build:production" },
-            "development": { "buildTarget": "wedding-invitation:build:development" }
+            "production":  { "buildTarget": "invitacion:build:production" },
+            "development": { "buildTarget": "invitacion:build:development" }
           },
           "defaultConfiguration": "development"
         }
