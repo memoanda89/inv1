@@ -1,65 +1,60 @@
 
-<!-- ── MUSIC PLAYER (siempre visible) ── -->
 <app-music-player></app-music-player>
 
-<!-- ── PÉTALOS ── -->
-<app-petals></app-petals>
-
-<!-- ── SOBRE ── -->
 @if (!state.isOpen()) {
   <app-envelope></app-envelope>
 }
 
-<!-- ══════════════════════════════════════
-     INVITACIÓN
-     ══════════════════════════════════════ -->
 @if (state.isOpen()) {
   <main class="inv">
 
-    <!-- ── NOMBRES ── -->
+    <!-- NOMBRES -->
     <section class="names-sec" appReveal>
       <div class="eyebrow">JUNTOS PARA SIEMPRE</div>
       <div class="ring-div"><span class="ln"></span><span class="ring-ico">💍</span><span class="ln"></span></div>
-      <div class="name" id="nameG">{{ cfg.config.groomName }}</div>
-      <div class="amp">&amp;</div>
-      <div class="name" id="nameV">{{ cfg.config.brideName }}</div>
+      <span class="name">{{ cfg.config.brideName }}</span>
+      <span class="amp">&amp;</span>
+      <span class="name">{{ cfg.config.groomName }}</span>
       <p class="names-sub">Celebran su unión en matrimonio</p>
     </section>
 
-    <!-- ── PARALLAX 1 ── -->
+    <!-- PARALLAX 1 -->
     <app-parallax imageUrl="assets/fotos/principal.jpg" [height]="440">
-      <div class="par-tag">20 · 09 · 2025</div>
+      <div class="par-tag">03 · 10 · 2026</div>
       <div class="par-line"></div>
-      <div class="par-title">{{ cfg.config.groomName }} &amp; {{ cfg.config.brideName }}</div>
+      <div class="par-title">{{ cfg.config.brideName }} &amp; {{ cfg.config.groomName }}</div>
       <div class="par-sub">Un amor que merece ser celebrado</div>
       <div class="par-badge">{{ cfg.config.venue }} · {{ cfg.config.time }}</div>
     </app-parallax>
 
-    <!-- ── DETALLES ── -->
+    <!-- DETALLES -->
     <section class="details" appReveal>
-      <div class="d-card"><div class="d-ico">📅</div><div class="d-lbl">Fecha</div><div class="d-val">20 de Septiembre, 2025</div></div>
+      <div class="d-card"><div class="d-ico">📅</div><div class="d-lbl">Fecha</div><div class="d-val">3 de Octubre, 2026</div></div>
       <span class="d-sep">◆</span>
       <div class="d-card"><div class="d-ico">🕐</div><div class="d-lbl">Hora</div><div class="d-val">{{ cfg.config.time }}</div></div>
       <span class="d-sep">◆</span>
       <div class="d-card"><div class="d-ico">📍</div><div class="d-lbl">Lugar</div><div class="d-val">{{ cfg.config.venue }}</div><div class="d-sub">{{ cfg.config.city }}</div></div>
     </section>
 
-    <!-- ── COUNTDOWN ── -->
+    <!-- MAPA — subido, justo después de detalles -->
+    <app-venue appReveal></app-venue>
+
+    <!-- COUNTDOWN -->
     <app-countdown [target]="cfg.config.weddingDate" appReveal></app-countdown>
 
     <div class="divid" appReveal>— ✦ ◆ ✦ —</div>
 
-    <!-- ── MENSAJE ── -->
+    <!-- MENSAJE -->
     <section class="msg-s" appReveal>
       <span class="qm">"</span>
       <p class="msg-t">Con el corazón lleno de amor y alegría, tenemos el honor de invitarte a celebrar el día más especial de nuestras vidas. Tu presencia hará este momento verdaderamente <em>inolvidable</em>.</p>
       <span class="qm cl">"</span>
     </section>
 
-    <!-- ── PAPÁS ── -->
+    <!-- PAPÁS -->
     <app-parents appReveal></app-parents>
 
-    <!-- ── PARALLAX 2 ── -->
+    <!-- PARALLAX 2 -->
     <app-parallax imageUrl="assets/fotos/historia.jpg" [height]="380">
       <div class="par-tag">Nuestra historia</div>
       <div class="par-line"></div>
@@ -67,7 +62,7 @@
       <div class="par-sub">"El amor no se mide en el tiempo, sino en los momentos que te dejan sin aliento"</div>
     </app-parallax>
 
-    <!-- ── GALERÍA DE FOTOS ── -->
+    <!-- GALERÍA DE FOTOS -->
     <section class="gall-s" appReveal>
       <div class="sec-title">Nuestra Historia en Fotos</div>
       <div class="gall-main" (click)="nextSlide()">
@@ -91,24 +86,16 @@
 
     <div class="divid" appReveal>— ✦ ◆ ✦ —</div>
 
-    <!-- ── ITINERARIO ── -->
+    <!-- ITINERARIO -->
     <app-itinerary></app-itinerary>
 
-    <!-- ── VESTIMENTA ── -->
+    <!-- VESTIMENTA -->
     <app-dress-code></app-dress-code>
 
-    <!-- ── CLIMA ── -->
+    <!-- CLIMA -->
     <app-weather></app-weather>
 
-    <div class="divid" appReveal>— ✦ ◆ ✦ —</div>
-
-    <!-- ── MAPA / VENUE ── -->
-    <app-venue></app-venue>
-
-    <!-- ── TRANSPORTE ── -->
-    <app-transport></app-transport>
-
-    <!-- ── PARALLAX 3 ── -->
+    <!-- PARALLAX 3 -->
     <app-parallax imageUrl="assets/fotos/ceremonia.jpg" [height]="360">
       <div class="par-tag">Mesa de regalos</div>
       <div class="par-line"></div>
@@ -116,67 +103,43 @@
       <div class="par-sub">Tu presencia ya es el regalo más grande</div>
     </app-parallax>
 
-    <!-- ── REGALOS ── -->
+    <!-- REGALOS -->
     <app-gifts></app-gifts>
 
-    <!-- ── HOTELES ── -->
+    <!-- HOTELES -->
     <app-hotels></app-hotels>
 
     <div class="divid" appReveal>— ✦ ◆ ✦ —</div>
 
-    <!-- ── FAQ ── -->
-    <app-faq></app-faq>
-
-    <div class="divid" appReveal>— ✦ ◆ ✦ —</div>
-
-    <!-- ── RSVP ── -->
+    <!-- RSVP -->
     <app-rsvp></app-rsvp>
 
     <div class="divid" appReveal>— ✦ ◆ ✦ —</div>
 
-    <!-- ══ SECCIONES INTERACTIVAS INDEPENDIENTES ══ -->
-
-    <!-- ── 1. PLAYLIST ── -->
+    <!-- PLAYLIST -->
     <app-playlist></app-playlist>
 
     <div class="divid" appReveal>— ✦ ◆ ✦ —</div>
 
-    <!-- ── 2. GALERÍA COLABORATIVA ── -->
+    <!-- GALERÍA COLABORATIVA -->
     <app-gallery></app-gallery>
 
     <div class="divid" appReveal>— ✦ ◆ ✦ —</div>
 
-    <!-- ── 3. PREDICCIONES ── -->
+    <!-- PREDICCIONES -->
     <app-predictions></app-predictions>
 
     <div class="divid" appReveal>— ✦ ◆ ✦ —</div>
 
-    <!-- ── 4. CÁPSULA DEL TIEMPO ── -->
+    <!-- CÁPSULA DEL TIEMPO -->
     <app-capsule></app-capsule>
 
     <div class="divid" appReveal>— ✦ ◆ ✦ —</div>
 
-    <!-- ── FIRMAS SVG ── -->
-    <div class="sigs" appReveal>
-      <div class="sig-wrap">
-        <svg class="sig-svg" viewBox="0 0 200 52" fill="none">
-          <path id="sig1" d="M12,38 C18,22 30,14 44,20 C53,25 50,36 42,38 C34,40 29,32 36,26 C45,19 60,22 66,31 C70,37 66,46 58,44 M66,31 C74,22 86,26 90,36 M90,36 C98,24 110,28 114,38 M114,38 C120,26 134,28 138,40 M138,40 C144,28 158,30 162,44" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <div class="sig-name">{{ cfg.config.groomName }}</div>
-      </div>
-      <div class="sig-amp">&amp;</div>
-      <div class="sig-wrap">
-        <svg class="sig-svg" viewBox="0 0 200 52" fill="none">
-          <path id="sig2" d="M10,20 C16,32 22,42 28,46 C35,50 40,38 35,28 M35,28 C40,18 52,24 54,34 M54,34 C58,22 68,20 72,32 M72,32 C76,20 88,18 92,32 M92,32 C96,20 108,22 110,36 M110,36 C116,22 130,24 132,40 M132,40 C138,26 152,28 154,44" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <div class="sig-name">{{ cfg.config.brideName }}</div>
-      </div>
-    </div>
-
-    <!-- ── FOOTER ── -->
+    <!-- FOOTER — sin firmas -->
     <footer class="footer-s" appReveal>
       <div class="ft-deco">✦ ✦ ✦</div>
-      <p class="ft-note">Con amor, {{ cfg.config.groomName }} &amp; {{ cfg.config.brideName }}</p>
+      <p class="ft-note">Con amor, {{ cfg.config.brideName }} &amp; {{ cfg.config.groomName }}</p>
       <div class="ft-hearts">♥ ♥ ♥</div>
     </footer>
 

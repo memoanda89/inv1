@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import {
   WeddingConfig, Song, Hotel, TimelineItem,
-  FaqItem, Prediction, CapsuleMessage, Advice, GalleryPhoto,
-  Gift
+  FaqItem, Prediction, CapsuleMessage, Advice, GalleryPhoto, Gift
 } from '../models/wedding.models';
 
 /**
@@ -16,23 +15,23 @@ export class WeddingConfigService {
 
   // ── Información principal ─────────────────────────────────────────────────
   readonly config: WeddingConfig = {
-    groomName:    'Santiago',
-    brideName:    'Valentina',
-    weddingDate:  new Date('2025-09-20T17:00:00'),
+    groomName:    'Memo',
+    brideName:    'Sandy',
+    weddingDate:  new Date('2026-10-03T17:00:00'),
     venue:        'Hacienda Los Laureles',
     city:         'San Miguel de Allende, Gto.',
     time:         '5:00 PM',
-    rsvpDeadline: '1° de Agosto de 2025',
+    rsvpDeadline: '1° de Septiembre de 2026',
     mapEmbedUrl:  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3727.22!2d-100.7430!3d20.9145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842b54a4cc80a7e9%3A0x5a1b4e2f3e1a9d2!2sSan%20Miguel%20de%20Allende!5e0!3m2!1ses!2smx!4v1700000000000',
     siteUrl:      'https://santiago-valentina.vercel.app',
   };
 
   // ── Nombres de los padres ─────────────────────────────────────────────────
   readonly parents = {
-    groomFather: 'Roberto García',
-    groomMother: 'Elena Martínez',
-    brideFather: 'Carlos López',
-    brideMother: 'Patricia Ruiz',
+    groomFather: 'Papá de Memo',
+    groomMother: 'Mamá de Memo',
+    brideFather: 'Papá de Sandy',
+    brideMother: 'Mamá de Sandy',
     groomMsg: 'Hoy entregamos a nuestro hijo con la certeza de que encontró a la persona con quien construir una vida llena de amor y alegría.',
     brideMsg: 'Con enorme alegría y gratitud, entregamos a nuestra hija sabiendo que estará en las mejores manos.',
   };
@@ -131,8 +130,7 @@ export class WeddingConfigService {
     { q:'¿Cómo llego a San Miguel de Allende?',   a:'Aeropuerto del Bajío (BJX) en León, ~1.5h. Desde CDMX ~3h. Desde Querétaro ~1h.' },
   ];
 
-  
-   public gifts: Gift[] = [
+    public gifts: Gift[] = [
     // Example data; replace with actual gift data
     {
       name: 'Example Gift 1',
@@ -145,8 +143,8 @@ export class WeddingConfigService {
   ];
 
   // ── Colores vestimenta ────────────────────────────────────────────────────
-  readonly ladiesColors  = ['#e8edf2','#d4c5a9','#c8a96e','#b8c4d0','#e8d5c0','#8c7355'];
-  readonly ladiesLabels  = ['Azul niebla','Champagne','Dorado','Gris perla','Blush','Nude'];
-  readonly gentsColors   = ['#2c3e50','#4a4a5a','#1a1a2e','#3d5a75'];
-  readonly gentsLabels   = ['Azul marino','Gris antracita','Negro','Azul pizarra'];
+  readonly ladiesColors: string[]  = [];
+  readonly ladiesLabels: string[]  = [];
+  readonly gentsColors: string[]  = [];
+  readonly gentsLabels: string[]  = [];
 }

@@ -2,29 +2,17 @@
 <section class="dress-s" appReveal="flip">
   <div class="sec-title">Código de Vestimenta</div>
   <div class="dress-grid">
-    <div class="dress-card card-3d">
+    <div class="dress-card">
       <div class="dress-ico">👗</div>
       <div class="dress-who">Damas</div>
       <div class="dress-main">Formal Elegante</div>
-      <p class="dress-note">Vestido largo o midi. Tacones o sandalias elegantes. El terreno es empedrado, considera el calzado.</p>
-      <div class="color-palette">
-        @for(c of cfg.ladiesColors; track $index; let i=$index){
-          <div class="color-chip" [style.background]="c" [title]="cfg.ladiesLabels[i]"></div>
-        }
-      </div>
-      <div class="dress-avoid">⚠ Por favor evita el blanco, marfil o crema</div>
+      <p class="dress-note">Vestido largo o midi en tonos neutros, champán o pasteles suaves. Por favor evita el blanco puro.</p>
     </div>
-    <div class="dress-card card-3d">
+    <div class="dress-card">
       <div class="dress-ico">🤵</div>
       <div class="dress-who">Caballeros</div>
-      <div class="dress-main">Traje Oscuro</div>
-      <p class="dress-note">Traje azul marino, gris antracita o negro. Corbata o moño recomendado.</p>
-      <div class="color-palette">
-        @for(c of cfg.gentsColors; track $index; let i=$index){
-          <div class="color-chip" [style.background]="c" [title]="cfg.gentsLabels[i]"></div>
-        }
-      </div>
-      <div class="dress-avoid">✓ Zapatos de vestir oscuros preferidos</div>
+      <div class="dress-main">Formal Elegante</div>
+      <p class="dress-note">Traje oscuro con corbata o moño. Zapatos de vestir preferidos.</p>
     </div>
   </div>
 </section>

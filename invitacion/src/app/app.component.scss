@@ -1,14 +1,21 @@
 
 .inv{position:relative;z-index:10;max-width:720px;margin:0 auto;padding:70px 44px 100px;text-align:center}
 
-/* nombres */
+/* nombres — dorado fijo sin shimmer */
 .names-sec{margin-bottom:44px}
 .eyebrow{font-family:'Cinzel',serif;font-size:8px;letter-spacing:9px;color:var(--slate);opacity:.75;text-transform:uppercase;margin-bottom:16px}
 .ring-div{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:20px}
 .ln{flex:1;max-width:80px;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,110,.55),transparent)}
 .ring-ico{font-size:20px}
-.name{font-family:'Cinzel',serif;font-size:clamp(48px,11vw,94px);font-weight:700;letter-spacing:3px;line-height:1;background:linear-gradient(140deg,var(--deep) 10%,var(--navy) 35%,var(--gold) 55%,var(--navy) 75%,var(--deep) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:250% 250%;animation:nameShim 8s linear infinite,nameGlow 4s ease-in-out infinite}
-.amp{font-family:'Playfair Display',serif;font-size:clamp(28px,6vw,58px);font-style:italic;color:var(--gold);opacity:.7;margin:10px 0;animation:ampFloat 4s ease-in-out infinite}
+.name{
+  font-family:'Cinzel',serif;
+  font-size:clamp(48px,11vw,94px);
+  font-weight:700;letter-spacing:3px;line-height:1;
+  color:var(--gold);
+  display:block;
+  animation:nameGlow 4s ease-in-out infinite;
+}
+.amp{font-family:'Playfair Display',serif;font-size:clamp(28px,6vw,58px);font-style:italic;color:var(--gold);opacity:.65;margin:10px 0;animation:ampFloat 4s ease-in-out infinite}
 .names-sub{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:var(--slate);letter-spacing:2px;margin-top:14px}
 
 /* detalles */
@@ -29,7 +36,7 @@
 .msg-t{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:300;line-height:2;color:var(--text-s);font-style:italic;max-width:520px;margin:0 auto}
 .msg-t em{color:var(--gold-d);font-style:normal;font-weight:600}
 
-/* gallery */
+/* galería de fotos */
 .gall-s{margin:40px 0}
 .gall-main{position:relative;overflow:hidden;height:300px;background:var(--bg2);border:1px solid var(--bg3);cursor:pointer;margin-bottom:14px;box-shadow:0 4px 20px rgba(74,107,138,.08)}
 .gall-main::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(232,237,242,.9) 100%);z-index:2;pointer-events:none}
@@ -47,13 +54,6 @@
 .dots{display:flex;justify-content:center;gap:7px;margin-bottom:14px}
 .dot{width:6px;height:6px;border-radius:50%;background:rgba(122,154,184,.3);transition:all .3s;cursor:pointer}
 .dot.on{background:var(--gold);width:18px;border-radius:3px}
-
-/* firmas */
-.sigs{display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;margin:48px 0 32px}
-.sig-wrap{display:inline-flex;flex-direction:column;align-items:center;gap:7px}
-.sig-svg{width:210px;height:54px}
-.sig-name{font-family:'Cormorant Garamond',serif;font-size:12px;font-style:italic;color:var(--slate);letter-spacing:3px}
-.sig-amp{font-family:'Playfair Display',serif;font-size:36px;font-style:italic;color:var(--gold);opacity:.6}
 
 /* footer */
 .footer-s{margin-top:56px;padding-top:32px;border-top:1px solid rgba(200,169,110,.25)}

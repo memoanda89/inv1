@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build"
+    "build": "ng build",
+    "deploy": "ng build --base-href /inv1/ && ngh --dir dist/invitacion/browser"
   },
   "dependencies": {
     "@angular/animations": "^18.0.0",
