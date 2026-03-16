@@ -19,7 +19,7 @@ export class WeddingService {
   /* ── Personaliza aquí todos los datos de la boda ── */
   readonly groomName   = 'Sandy';
   readonly brideName   = 'Memo';
-  readonly weddingDate = new Date('2025-09-20T17:00:00');
+  readonly weddingDate = new Date('2023-10-03T17:00:00');
   readonly venue       = 'Hacienda Los Laureles';
   readonly city        = 'San Miguel de Allende, Gto.';
   readonly time        = '5:00 PM';
