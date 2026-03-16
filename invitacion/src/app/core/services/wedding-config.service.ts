@@ -39,11 +39,11 @@ export class WeddingConfigService {
   // ── Galería demo (agrega tus fotos reales en assets/fotos/) ──────────────
 
   readonly photos = [
-    { label: 'El día que nos conocimos',   icon: '♡' },
-    { label: 'Los mejores momentos juntos', icon: '◆' },
-    { label: 'Aventuras que vivimos',       icon: '✦' },
-    { label: 'La propuesta más especial',   icon: '💍' },
-    { label: 'Pronto... nuestra boda',      icon: '∞' },
+    { label: 'El día que nos conocimos',   icon: '♡', imageUrl: 'assets/fotos/foto-1.jpg' },
+    { label: 'Los mejores momentos juntos', icon: '◆', imageUrl: 'assets/fotos/foto-2.jpg' },
+    { label: 'Aventuras que vivimos',       icon: '✦', imageUrl: 'assets/fotos/foto-3.jpg' },
+    { label: 'La propuesta más especial',   icon: '💍', imageUrl: 'assets/fotos/foto-1.jpg' },
+    { label: 'Pronto... nuestra boda',      icon: '∞', imageUrl: 'assets/fotos/foto-2.jpg' },
   ];
 
   readonly bankAccount = {
@@ -52,10 +52,10 @@ export class WeddingConfigService {
   };
 
   readonly demoGallery: GalleryPhoto[] = [
-    { id:1, emoji:'🌸', name:'María González', msg:'Los conocí en la universidad y supe que eran el uno para el otro desde el primer día. ¡Los quiero mucho!' },
-    { id:2, emoji:'💐', name:'Carlos Herrera',  msg:'Santiago es mi mejor amigo desde la prepa. Valentina, gracias por hacerlo tan feliz.' },
-    { id:3, emoji:'🥂', name:'Ana Martínez',    msg:'Fui testigo de su primer beso y hoy soy testigo de este momento tan especial.' },
-    { id:4, emoji:'📸', name:'Roberto García',  msg:'Ver a mi hijo tan feliz es el mejor regalo que la vida me pudo dar.' },
+    { id:1, emoji:'🌸', name:'María González', msg:'Los conocí en la universidad y supe que eran el uno para el otro desde el primer día. ¡Los quiero mucho!' ,imageUrl:'/assets/fotos/foto-1.jpg'},
+    { id:2, emoji:'💐', name:'Carlos Herrera',  msg:'Santiago es mi mejor amigo desde la prepa. Valentina, gracias por hacerlo tan feliz.' ,imageUrl:'/assets/fotos/foto-2.jpg'},
+    { id:3, emoji:'🥂', name:'Ana Martínez',    msg:'Fui testigo de su primer beso y hoy soy testigo de este momento tan especial.' ,imageUrl:'/assets/fotos/foto-3.jpg'},
+    { id:4, emoji:'📸', name:'Roberto García',  msg:'Ver a mi hijo tan feliz es el mejor regalo que la vida me pudo dar.' ,imageUrl:'/assets/fotos/foto-1.jpg'},
   ];
 
   // ── Canciones demo para la playlist ──────────────────────────────────────

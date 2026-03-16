@@ -19,22 +19,19 @@
     </section>
 
     <!-- PARALLAX 1 -->
-    <app-parallax imageUrl="assets/fotos/principal.jpg" [height]="440">
-      <div class="par-tag">03 · 10 · 2026</div>
+    <app-parallax imageUrl="assets/fotos/foto-3.jpg" [height]="440">
+      
       <div class="par-line"></div>
       <div class="par-title">{{ cfg.config.brideName }} &amp; {{ cfg.config.groomName }}</div>
       <div class="par-sub">Un amor que merece ser celebrado</div>
-      <div class="par-badge">{{ cfg.config.venue }} · {{ cfg.config.time }}</div>
+     
     </app-parallax>
 
     <!-- DETALLES -->
     <section class="details" appReveal>
-      <div class="d-card"><div class="d-ico">📅</div><div class="d-lbl">Fecha</div><div class="d-val">3 de Octubre, 2026</div></div>
-      <span class="d-sep">◆</span>
-      <div class="d-card"><div class="d-ico">🕐</div><div class="d-lbl">Hora</div><div class="d-val">{{ cfg.config.time }}</div></div>
-      <span class="d-sep">◆</span>
-      <div class="d-card"><div class="d-ico">📍</div><div class="d-lbl">Lugar</div><div class="d-val">{{ cfg.config.venue }}</div><div class="d-sub">{{ cfg.config.city }}</div></div>
-    </section>
+      <div class="par-tag">03 · 10 · 2026</div>
+     <div class="par-badge">{{ cfg.config.venue }} · {{ cfg.config.time }}</div>
+      </section>
 
     <!-- MAPA — subido, justo después de detalles -->
     <app-venue appReveal></app-venue>
