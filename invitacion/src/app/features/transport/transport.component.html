@@ -1,0 +1,14 @@
+<section class="transport-s" appReveal>
+  <div class="sec-title">Transporte</div>
+  <div class="transport-grid">
+    @for(t of items; track t.route) {
+      <div class="tr-card">
+        <div class="tr-ico">{{t.ico}}</div>
+        <div class="tr-route">{{t.route}}</div>
+        <div class="tr-time">{{t.time}}</div>
+        <div class="tr-desc">{{t.desc}}</div>
+      </div>
+    }
+  </div>
+  <div class="transport-note">📱 Te enviaremos por WhatsApp los detalles exactos del shuttle 2 semanas antes.</div>
+</section>

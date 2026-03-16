@@ -1,0 +1,10 @@
+
+.parents-s{margin:40px 0}
+.parents-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.p-card{padding:24px 20px;background:var(--ice);border:1px solid var(--bg3);position:relative;box-shadow:0 2px 12px rgba(74,107,138,.06)}
+.p-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,110,.45),transparent)}
+.p-ico{font-size:24px;margin-bottom:10px}
+.p-side{font-family:'Cinzel',serif;font-size:8px;letter-spacing:4px;color:var(--gold);opacity:.7;text-transform:uppercase;margin-bottom:10px}
+.p-msg{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:var(--text-s);line-height:1.8;margin-bottom:12px}
+.p-names{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;color:var(--slate);opacity:.8}
+@media(max-width:600px){.parents-grid{grid-template-columns:1fr}}

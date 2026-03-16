@@ -1,0 +1,58 @@
+
+<section class="isec" appReveal="right">
+  <div class="isec-head">
+    <div class="isec-icon pred-ico">🎲</div>
+    <div class="isec-info"><div class="isec-t">Predicciones de la boda</div><div class="isec-s">¡Los resultados se revelan el día de la boda!</div></div>
+    <div class="isec-badge ib-purp">5 preguntas</div>
+  </div>
+  <div class="isec-body">
+    <div class="pred-msg">
+      @if(step===0){Antes de comenzar, ¿cuál es tu nombre?}
+      @if(step===1){¡Hola {{state.predName()}}! Elige tus predicciones:}
+      @if(step===2){¡Gracias {{state.predName()}}! Todo guardado 🎉}
+    </div>
+    @if(step===0){
+      <input class="field" [(ngModel)]="name" placeholder="Tu nombre..." style="margin-bottom:12px">
+      <button class="btn btn-navy" (click)="start()">Comenzar predicciones →</button>
+    }
+    @if(step===1){
+      @for(p of cfg.predictions; track $index; let qi=$index){
+        <div class="qz-q">
+          <div class="qz-lbl"><div class="qz-num">{{qi+1}}</div>{{p.question}}</div>
+          <div class="qz-opts">
+            @for(o of p.options; track $index; let oi=$index){
+              <div class="qz-opt" [class.sel]="isSel(qi,oi)" (click)="pick(qi,oi)">{{o}}</div>
+            }
+          </div>
+        </div>
+      }
+      @if(state.allAnswered){
+        <button class="btn btn-navy" (click)="submit()" style="width:100%;margin-top:8px">Enviar mis predicciones ✦</button>
+      }
+    }
+    @if(step===2){
+      <div class="pred-ok">
+        <div style="font-size:32px;margin-bottom:10px">🎉</div>
+        <div class="pred-ok-t">¡PREDICCIONES GUARDADAS!</div>
+        <div class="pred-ok-s">Los resultados se revelan el 20 de septiembre</div>
+      </div>
+      @for(p of cfg.predictions; track $index; let qi=$index){
+        <div class="res-block">
+          <div class="res-q">{{p.question}}</div>
+          @for(o of p.options; track $index; let oi=$index){
+            <div class="res-row">
+              <div class="res-opt">
+                @if(isSel(qi,oi)){<span class="res-mine">▶</span>}@else{<span class="res-sp"></span>}{{o}}
+              </div>
+              <div class="res-bar-wrap">
+                <div class="res-bar"><div class="res-fill" [style.width.%]="pct(qi,oi)"></div></div>
+                <span class="res-pct">{{pct(qi,oi)}}%</span>
+              </div>
+            </div>
+          }
+        </div>
+      }
+      <div class="pred-lock">🔒 Los resultados reales se revelan el día de la boda</div>
+    }
+  </div>
+</section>

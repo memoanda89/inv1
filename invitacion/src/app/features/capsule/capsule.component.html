@@ -1,0 +1,37 @@
+
+<section class="isec" appReveal="flip">
+  <div class="isec-head">
+    <div class="isec-icon cp-ico">⏳</div>
+    <div class="isec-info"><div class="isec-t">Cápsula del tiempo</div><div class="isec-s">Santiago &amp; Valentina la abren en su primer aniversario</div></div>
+    <div class="isec-badge ib-blue">{{msgs().length}} mensajes</div>
+  </div>
+  <div class="isec-body">
+    <div class="cp-tabs">
+      <button class="cp-tab" [class.on]="tab()==='text'"  (click)="tab.set('text')">✉️ Mensaje</button>
+      <button class="cp-tab" [class.on]="tab()==='video'" (click)="tab.set('video')">🎬 Video</button>
+    </div>
+    @if(tab()==='text'){
+      <div class="cp-list">
+        @for(m of msgs(); track $index){
+          <div class="cp-msg"><div class="cp-name">{{m.name}}</div><div class="cp-date">Escrito el {{m.date}}</div><div class="cp-text">"{{m.text}}"</div><div class="cp-type">{{m.type==='video'?'🎬':'✉️'}}</div></div>
+        }
+      </div>
+      <label class="field-label">Tu nombre</label>
+      <input class="field" [(ngModel)]="name" placeholder="¿Quién escribe?" style="margin-bottom:12px">
+      <label class="field-label">Tu mensaje — lo leerán el 20 sept 2026</label>
+      <textarea class="field" [(ngModel)]="msg" rows="4" placeholder="Escribe algo que recuerden en un año..." style="margin-bottom:14px;resize:none"></textarea>
+      <button class="btn btn-navy" (click)="submit()" style="width:100%">Sellar mi mensaje ✦</button>
+    }
+    @if(tab()==='video'){
+      <div class="cp-vid-banner"><div style="font-size:32px;margin-bottom:8px">🎬</div><div class="cp-vt">VIDEOS SELLADOS</div><div class="cp-vs">Se desbloquean el 20 sept 2026</div></div>
+      <div class="cp-vid-grid">
+        <div class="cpv locked"><div>🔒</div><span>María G.</span></div>
+        <div class="cpv locked"><div>🔒</div><span>Carlos H.</span></div>
+        <div class="cpv upload"><div>+</div><span>Tu video</span></div>
+      </div>
+      <div class="cp-upload-zone"><div style="font-size:28px;margin-bottom:8px;opacity:.5">🎬</div><div class="cp-ut">Grabar o subir video</div><div class="cp-us">MP4, MOV · máx 100MB</div></div>
+      <button class="btn btn-navy" style="width:100%">Subir mi video ✦</button>
+    }
+  </div>
+  <div class="cp-lock"><span style="font-size:24px">🔐</span><div><div class="cp-lt">SE ABRE EL 20 DE SEPTIEMBRE, 2026</div><div class="cp-ls">Todo sellado hasta el primer aniversario de Santiago &amp; Valentina</div></div></div>
+</section>

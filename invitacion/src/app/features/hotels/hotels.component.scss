@@ -1,0 +1,18 @@
+
+.hotels-s{margin:40px 0}
+.hotels-intro{font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:var(--slate);margin-bottom:24px;line-height:1.7}
+.hotels-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:14px;margin-bottom:16px}
+.h-card{padding:20px 16px;background:var(--ice);border:1px solid var(--bg3);position:relative;text-align:left;transition:transform .3s,box-shadow .3s;box-shadow:0 2px 10px rgba(74,107,138,.05);overflow:hidden}
+.h-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,110,.45),transparent)}
+.h-card::after{content:'';position:absolute;top:-50%;left:-75%;width:50%;height:200%;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.18) 50%,transparent 60%);transition:left .5s ease}
+.h-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(74,107,138,.12)}
+.h-card:hover::after{left:125%}
+.h-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.h-stars{color:var(--gold);font-size:8px;letter-spacing:2px}
+.h-price{font-family:'Cinzel',serif;font-size:9px;color:var(--slate)}
+.h-name{font-family:'Cinzel',serif;font-size:11px;color:var(--deep);margin-bottom:3px;line-height:1.4}
+.h-cat{font-family:'Cormorant Garamond',serif;font-size:11px;color:var(--gold-d);font-style:italic;margin-bottom:7px}
+.h-dist{font-family:'Cormorant Garamond',serif;font-size:11px;color:var(--slate);margin-bottom:8px}
+.h-tip{font-family:'Cormorant Garamond',serif;font-size:12px;font-style:italic;color:var(--text-s);line-height:1.5;margin-bottom:12px}
+.h-link{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;color:var(--gold);border-bottom:1px solid rgba(200,169,110,.35);padding-bottom:2px;text-decoration:none;text-transform:uppercase}
+.hotels-note{padding:12px 16px;background:rgba(200,169,110,.06);border:1px solid rgba(200,169,110,.18);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--slate);line-height:1.6}

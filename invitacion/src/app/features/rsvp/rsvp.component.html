@@ -1,0 +1,16 @@
+
+<section class="rsvp-s" appReveal>
+  <div class="rsvp-ttl">Confirmación de Asistencia</div>
+  <p class="rsvp-sub">Por favor confirma antes del {{cfg.config.rsvpDeadline}}</p>
+  @if (!state.rsvp()) {
+    <div class="rsvp-btns">
+      <button class="rb rb-yes" (click)="confirm(true)"><span>✓&nbsp; Asistiré con gusto</span></button>
+      <button class="rb rb-no"  (click)="confirm(false)"><span>✗&nbsp; No podré asistir</span></button>
+    </div>
+  } @else {
+    <div class="rsvp-resp">
+      <div class="resp-ico">{{state.rsvp()=== 'yes' ? '🥂' : '🙏'}}</div>
+      <p class="resp-msg">{{state.rsvp()=== 'yes' ? '¡Gracias! Te esperamos con los brazos abiertos 💍' : 'Lo entendemos, gracias por avisarnos.'}}</p>
+    </div>
+  }
+</section>

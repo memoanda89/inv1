@@ -1,0 +1,11 @@
+
+.itin-s{margin:40px 0}
+.timeline{position:relative;padding:0 0 0 32px;text-align:left}
+.tl-line{position:absolute;left:8px;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(200,169,110,.4),rgba(200,169,110,.4),transparent);transform-origin:top;transform:scaleY(0);transition:transform 1.8s var(--ease)}
+.tl-line.drawn{transform:scaleY(1)}
+.tl-item{position:relative;margin-bottom:20px;opacity:0;transform:translateX(-20px);animation:tlIn .6s var(--ease) forwards}
+@keyframes tlIn{to{opacity:1;transform:none}}
+.tl-dot{position:absolute;left:-28px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--gold);border:2px solid var(--ice);box-shadow:0 0 0 2px rgba(200,169,110,.3)}
+.tl-time{font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;color:var(--gold);margin-bottom:3px}
+.tl-title{font-family:'Cinzel',serif;font-size:13px;color:var(--deep);letter-spacing:1px;margin-bottom:2px}
+.tl-desc{font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:var(--slate)}

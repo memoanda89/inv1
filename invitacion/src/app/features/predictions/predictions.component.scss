@@ -1,0 +1,23 @@
+
+.pred-ico{background:linear-gradient(135deg,#7c4dbd,#5534a5);font-size:22px}
+.pred-msg{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:var(--text-m);margin-bottom:16px}
+.qz-q{margin-bottom:18px}
+.qz-lbl{font-family:'Cinzel',serif;font-size:10px;letter-spacing:2px;color:var(--gold-d);text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.qz-num{width:22px;height:22px;border-radius:50%;background:var(--gold);color:#fff;font-family:'Cinzel',serif;font-size:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.qz-opts{display:flex;flex-wrap:wrap;gap:8px}
+.qz-opt{padding:8px 14px;font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:var(--text-s);border:1px solid var(--bg3);background:var(--bg2);cursor:pointer;transition:all .2s}
+.qz-opt:hover{border-color:rgba(200,169,110,.45);color:var(--deep)}
+.qz-opt.sel{background:linear-gradient(135deg,rgba(200,169,110,.18),rgba(200,169,110,.08));border-color:rgba(200,169,110,.6);color:var(--gold-d)}
+.pred-ok{padding:18px;background:rgba(124,77,189,.06);border:1px solid rgba(124,77,189,.2);text-align:center;margin-bottom:20px}
+.pred-ok-t{font-family:'Cinzel',serif;font-size:11px;letter-spacing:3px;color:#5534a5;margin-bottom:5px}
+.pred-ok-s{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:var(--text-s)}
+.res-block{margin-bottom:18px}
+.res-q{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;color:var(--gold-d);margin-bottom:10px;opacity:.9;text-transform:uppercase}
+.res-row{margin-bottom:10px}
+.res-opt{font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--text-s);font-style:italic;margin-bottom:4px;display:flex;align-items:center;gap:6px}
+.res-mine{color:var(--gold-d);font-size:10px} .res-sp{width:14px;display:inline-block}
+.res-bar-wrap{display:flex;align-items:center;gap:8px}
+.res-bar{height:5px;border-radius:3px;background:var(--bg3);flex:1;overflow:hidden}
+.res-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--gold),var(--gold-l));transition:width 1.2s var(--ease)}
+.res-pct{font-family:'Cinzel',serif;font-size:9px;color:var(--gold-d);min-width:32px;text-align:right}
+.pred-lock{font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:var(--text-m);text-align:center;margin-top:14px;padding-top:14px;border-top:1px solid var(--bg3)}

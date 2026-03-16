@@ -1,0 +1,15 @@
+
+<section class="itin-s" appReveal="zoom">
+  <div class="sec-title">Itinerario del Día</div>
+  <div class="timeline">
+    <div class="tl-line" #line></div>
+    @for(item of cfg.timeline; track $index; let i=$index){
+      <div class="tl-item" [style.animation-delay.ms]="i*120">
+        <div class="tl-dot"></div>
+        <div class="tl-time">{{item.time}}</div>
+        <div class="tl-title">{{item.title}}</div>
+        <div class="tl-desc">{{item.desc}}</div>
+      </div>
+    }
+  </div>
+</section>

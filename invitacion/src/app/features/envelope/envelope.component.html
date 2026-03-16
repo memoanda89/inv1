@@ -1,0 +1,13 @@
+
+<div class="env-screen" (click)="open()">
+  <div class="env-glow"></div>
+  <div class="env-box">
+    <div class="envelope" [class.open]="opened">
+      <div class="ev-back"></div>
+      <div class="ev-flap"></div>
+      <div class="ev-seal">S&amp;V</div>
+      <div class="ev-letter"><div class="lt-prev"><div class="lt-ring">💍</div><p>Te invitamos a nuestra boda</p></div></div>
+    </div>
+    <p class="tap-h" [class.gone]="opened">✦ Toca para abrir tu invitación ✦</p>
+  </div>
+</div>

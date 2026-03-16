@@ -1,0 +1,27 @@
+
+.mfab{position:fixed;bottom:28px;right:28px;z-index:9000;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.mfab-hint{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;color:var(--gold-d);background:rgba(242,245,248,.97);border:1px solid rgba(200,169,110,.38);padding:6px 14px;white-space:nowrap;animation:slideUp .3s ease}
+.mfab-panel{background:rgba(242,245,248,.97);border:1px solid rgba(200,169,110,.35);box-shadow:0 8px 32px rgba(74,107,138,.18);padding:14px 16px;min-width:230px;animation:slideUp .3s ease}
+.mfab-row{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.mfab-disc{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--bg2),var(--mist));border:1px solid rgba(200,169,110,.35);display:flex;align-items:center;justify-content:center;font-size:16px}
+.mfab-disc.spin{animation:spin 4s linear infinite}
+.mfab-info{flex:1}
+.mfab-title{font-family:'Cinzel',serif;font-size:11px;color:var(--deep);letter-spacing:1px}
+.mfab-artist{font-family:'Cormorant Garamond',serif;font-size:12px;color:var(--text-m);font-style:italic}
+.mfab-mute{background:none;border:none;cursor:pointer;font-size:18px}
+.mfab-vol-row{display:flex;align-items:center;gap:8px}
+.mfab-vol-lbl{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;color:var(--slate);opacity:.7}
+.mfab-vol{flex:1;accent-color:var(--gold)}
+.mfab-vol-val{font-family:'Cinzel',serif;font-size:9px;color:var(--gold);min-width:28px;text-align:right}
+.mfab-btn{width:56px;height:56px;border-radius:50%;background:var(--ice);border:1.5px solid rgba(200,169,110,.5);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(74,107,138,.2);transition:transform .25s;position:relative}
+.mfab-btn:hover{transform:scale(1.08)}
+.mfab-btn.playing{animation:musicPulse 2.5s ease-in-out infinite}
+.mfab-eq{display:flex;align-items:flex-end;gap:3px;height:18px}
+.bar{width:3.5px;background:var(--gold);border-radius:2px;animation:eqBar .9s ease-in-out infinite}
+.bar:nth-child(1){height:8px;animation-delay:0s}
+.bar:nth-child(2){height:16px;animation-delay:.18s}
+.bar:nth-child(3){height:10px;animation-delay:.32s}
+.bar:nth-child(4){height:18px;animation-delay:.08s}
+.mfab-play{color:var(--gold-d);font-size:18px;margin-left:3px}
+.mfab-badge{position:absolute;top:-4px;right:-4px;width:18px;height:18px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff}
+@media(max-width:600px){.mfab{bottom:16px;right:16px}}

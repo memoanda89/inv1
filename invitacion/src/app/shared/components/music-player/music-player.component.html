@@ -1,0 +1,32 @@
+
+<audio #audio [src]="src" loop preload="none"></audio>
+<div class="mfab">
+  @if (showHint() && !playing()) {
+    <div class="mfab-hint">🎵 Golden Hour · JVKE</div>
+  }
+  @if (showPanel()) {
+    <div class="mfab-panel">
+      <div class="mfab-row">
+        <div class="mfab-disc" [class.spin]="playing()">🎵</div>
+        <div class="mfab-info">
+          <div class="mfab-title">Golden Hour</div>
+          <div class="mfab-artist">JVKE</div>
+        </div>
+        <button class="mfab-mute" (click)="toggleMute()">{{muted() ? "🔇" : "🔊"}}</button>
+      </div>
+      <div class="mfab-vol-row">
+        <span class="mfab-vol-lbl">VOL</span>
+        <input type="range" min="0" max="100" [value]="volume()" (input)="onVolume($event)" class="mfab-vol">
+        <span class="mfab-vol-val">{{volume()}}%</span>
+      </div>
+    </div>
+  }
+  <button class="mfab-btn" [class.playing]="playing()" (click)="toggle()">
+    @if (playing()) {
+      <div class="mfab-eq"><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+    } @else {
+      <span class="mfab-play">▶</span>
+    }
+    @if (!playing()) { <div class="mfab-badge">♪</div> }
+  </button>
+</div>

@@ -1,0 +1,46 @@
+
+<section class="isec" appReveal="left">
+  <div class="isec-head">
+    <div class="isec-icon gal-ico">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+    </div>
+    <div class="isec-info"><div class="isec-t">Galería de recuerdos</div><div class="isec-s">Comparte tu foto y cuéntanos por qué nos recuerdas</div></div>
+    <div class="isec-badge ib-blue">{{gallery().length}} fotos</div>
+  </div>
+  <div class="gal-grid">
+    @for (p of gallery(); track p.id) {
+      <div class="gal-cell" (click)="open(p)">
+        @if (p.imageUrl) { <img [src]="p.imageUrl" [alt]="p.name" class="gal-img"> }
+        @else             { <div class="gal-ph">{{p.emoji}}</div> }
+        <div class="gal-ov"><div class="gal-cn">{{p.name}}</div><div class="gal-cm">{{p.msg.slice(0,55)}}{{p.msg.length>55?'...':''}}</div></div>
+      </div>
+    }
+  </div>
+  @if (!showForm()) {
+    <div class="gal-up" (click)="showF()">
+      <div class="gal-up-i">📷</div>
+      <div class="gal-up-t">Agregar mi recuerdo</div>
+      <div class="gal-up-s">Toca aquí para subir tu foto y dejar un mensaje</div>
+    </div>
+  } @else {
+    <div class="isec-body">
+      <div class="gal-preview">📷</div>
+      <label class="field-label">Tu nombre</label>
+      <input class="field" [(ngModel)]="name" placeholder="¿Cómo te llamas?" style="margin-bottom:12px">
+      <label class="field-label">¿Por qué nos recuerdas?</label>
+      <textarea class="field" [(ngModel)]="msg" rows="3" placeholder="Escribe algo especial..." style="margin-bottom:14px;resize:none"></textarea>
+      <div class="gal-btns">
+        <button class="btn btn-ghost" (click)="hideF()">Cancelar</button>
+        <button class="btn btn-navy" (click)="submit()">Compartir recuerdo ✦</button>
+      </div>
+    </div>
+  }
+  @if (selected(); as p) {
+    <div class="gal-lb">
+      <div class="gal-lb-e">{{p.emoji}}</div>
+      <div class="gal-lb-n">{{p.name}}</div>
+      <div class="gal-lb-m">"{{p.msg}}"</div>
+      <button class="btn btn-gold" (click)="close()">Cerrar</button>
+    </div>
+  }
+</section>

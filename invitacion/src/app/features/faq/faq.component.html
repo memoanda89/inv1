@@ -1,0 +1,17 @@
+
+<section class="faq-s" appReveal>
+  <div class="sec-title">Preguntas Frecuentes</div>
+  <div class="faq-list">
+    @for(item of cfg.faq; track $index; let i=$index){
+      <div class="faq-item" [class.open]="open()===i">
+        <button class="faq-q" (click)="toggle(i)">
+          <span>{{item.q}}</span>
+          <span class="faq-icon">{{open()===i ? '−' : '+'}}</span>
+        </button>
+        @if(open()===i){
+          <div class="faq-a">{{item.a}}</div>
+        }
+      </div>
+    }
+  </div>
+</section>

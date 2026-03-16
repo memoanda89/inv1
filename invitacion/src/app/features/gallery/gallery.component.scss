@@ -1,0 +1,23 @@
+
+.gal-ico{background:linear-gradient(135deg,var(--navy),var(--slate))}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.gal-cell{aspect-ratio:1;position:relative;overflow:hidden;cursor:pointer;background:var(--bg2)}
+.gal-img,.gal-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:30px;background:linear-gradient(135deg,var(--bg2),var(--bg3));transition:transform .35s;object-fit:cover}
+.gal-cell:hover .gal-img,.gal-cell:hover .gal-ph{transform:scale(1.07)}
+.gal-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(44,62,80,.78),transparent 55%);opacity:0;transition:opacity .3s;display:flex;flex-direction:column;justify-content:flex-end;padding:10px}
+.gal-cell:hover .gal-ov{opacity:1}
+.gal-cn{font-family:'Cinzel',serif;font-size:9px;color:#fff;letter-spacing:1px;margin-bottom:2px}
+.gal-cm{font-family:'Cormorant Garamond',serif;font-size:11px;font-style:italic;color:rgba(255,255,255,.8);line-height:1.3}
+.gal-up{border:2px dashed rgba(200,169,110,.38);padding:28px 20px;text-align:center;cursor:pointer;transition:all .3s;margin:16px 24px}
+.gal-up:hover{border-color:var(--gold);background:rgba(200,169,110,.04)}
+.gal-up-i{font-size:28px;opacity:.55;margin-bottom:8px}
+.gal-up-t{font-family:'Cinzel',serif;font-size:10px;letter-spacing:3px;color:var(--navy);text-transform:uppercase;margin-bottom:4px}
+.gal-up-s{font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:var(--text-m)}
+.gal-preview{height:120px;background:var(--bg2);border:1px solid var(--bg3);display:flex;align-items:center;justify-content:center;font-size:44px;margin-bottom:14px}
+.gal-btns{display:flex;gap:10px}
+.gal-btns .btn:first-child{flex:1} .gal-btns .btn:last-child{flex:2}
+.gal-lb{padding:24px;text-align:center;background:rgba(44,62,80,.04);border-top:1px solid var(--bg3)}
+.gal-lb-e{font-size:56px;margin-bottom:12px}
+.gal-lb-n{font-family:'Cinzel',serif;font-size:11px;letter-spacing:3px;color:var(--gold);margin-bottom:10px}
+.gal-lb-m{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:var(--text-s);line-height:1.8;max-width:500px;margin:0 auto 18px}
+@media(max-width:600px){.gal-grid{grid-template-columns:repeat(2,1fr)}}

@@ -1,0 +1,31 @@
+
+<section class="gifts-s" appReveal>
+  <div class="sec-title">Mesa de Regalos</div>
+  <div class="gifts-grid">
+    @for(g of cfg.gifts; track g.name){
+      <div class="g-card shine-card">
+        <span class="g-icon">{{g.icon}}</span>
+        <div class="g-name">{{g.name}}</div>
+        <div class="g-desc">{{g.desc}}</div>
+        @if(g.linkUrl === '#account'){
+          <a class="g-link" (click)="showAccount.set(!showAccount())" style="cursor:pointer">{{g.linkLabel}}</a>
+        } @else {
+          <a class="g-link" [href]="g.linkUrl" target="_blank">{{g.linkLabel}}</a>
+        }
+      </div>
+    }
+  </div>
+  @if(showAccount()){
+    <div class="acct-modal">
+      <div class="acct-ttl">DATOS BANCARIOS</div>
+      <div class="acct-row">Banco: <strong>{{cfg.bankAccount.bank}}</strong></div>
+      <div class="acct-row">Titular: <strong>{{cfg.bankAccount.holder}}</strong></div>
+      <div class="acct-row">CLABE: <strong>{{cfg.bankAccount.clabe}}</strong></div>
+      <div class="acct-row">Concepto: <strong>{{cfg.bankAccount.concept}}</strong></div>
+      <button class="btn btn-navy" style="margin-top:12px;width:100%" (click)="copy(cfg.bankAccount.clabe)">
+        {{copied() ? '✓ CLABE copiada' : 'Copiar CLABE'}}
+      </button>
+    </div>
+  }
+  <p class="gifts-note">Tu presencia es el mejor regalo. ¡Gracias! 🤍</p>
+</section>

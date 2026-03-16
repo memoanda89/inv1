@@ -1,0 +1,17 @@
+
+<section class="venue-s" appReveal>
+  <div class="sec-title">Dónde Celebramos</div>
+  <div class="map-card">
+    <iframe [src]="mapUrl" class="map-frame" allowfullscreen loading="lazy"></iframe>
+    <div class="map-overlay"></div>
+    <div class="map-pin">
+      <div class="mpb-n">Hacienda Los Laureles</div>
+      <div class="mpb-a">San Miguel de Allende, Guanajuato</div>
+    </div>
+  </div>
+  <div class="map-actions">
+    <a class="map-btn" href="https://maps.google.com/?q=San+Miguel+de+Allende+Guanajuato+Mexico" target="_blank">🗺️ Google Maps</a>
+    <a class="map-btn" href="https://maps.apple.com/?q=San+Miguel+de+Allende" target="_blank">🧭 Apple Maps</a>
+    <button class="map-btn" (click)="copy()">📋 {{copied() ? '¡Copiada! ✓' : 'Copiar dirección'}}</button>
+  </div>
+</section>

@@ -1,0 +1,24 @@
+
+<section class="weather-s" appReveal="zoom">
+  <div class="sec-title">Clima Esperado</div>
+  <div class="weather-card">
+    <div class="wc-date">San Miguel de Allende · 20 de Septiembre, 2025</div>
+    <div class="wc-main">
+      <div class="wc-icon">⛅</div>
+      <div class="wc-temp">
+        <div class="wc-deg">22°C</div>
+        <div class="wc-desc">Parcialmente nublado</div>
+      </div>
+    </div>
+    <div class="wc-grid">
+      @for(s of stats; track s.lbl){
+        <div class="wc-stat">
+          <div class="ws-ico">{{s.ico}}</div>
+          <div class="ws-val">{{s.val}}</div>
+          <div class="ws-lbl">{{s.lbl}}</div>
+        </div>
+      }
+    </div>
+    <p class="wc-note">* Septiembre en SMA puede tener lluvias vespertinas cortas. Te recomendamos traer un chal o chamarra ligera para la noche.</p>
+  </div>
+</section>

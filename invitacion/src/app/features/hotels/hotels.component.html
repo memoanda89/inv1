@@ -1,0 +1,21 @@
+
+<section class="hotels-s" appReveal>
+  <div class="sec-title">Dónde Hospedarse</div>
+  <p class="hotels-intro">San Miguel de Allende tiene opciones para todos los gustos. Reserva con anticipación, especialmente en septiembre.</p>
+  <div class="hotels-grid">
+    @for(h of cfg.hotels; track h.name){
+      <div class="h-card shine-card">
+        <div class="h-top">
+          <div class="h-stars">{{'✦'.repeat(h.stars)}}</div>
+          <div class="h-price">{{h.price}}</div>
+        </div>
+        <div class="h-name">{{h.name}}</div>
+        <div class="h-cat">{{h.category}}</div>
+        <div class="h-dist">📍 {{h.distance}} del venue</div>
+        <div class="h-tip">{{h.tip}}</div>
+        <a class="h-link" [href]="h.url" target="_blank">Ver hotel →</a>
+      </div>
+    }
+  </div>
+  <div class="hotels-note">💡 Menciona la boda de Santiago &amp; Valentina — algunos hoteles ofrecen descuentos para grupos.</div>
+</section>
