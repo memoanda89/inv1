@@ -10,7 +10,7 @@
   <div class="gal-grid">
     @for (p of gallery(); track p.id) {
       <div class="gal-cell" (click)="open(p)">
-        @if (p.imageUrl) { <img [src]="p.imageUrl" [alt]="p.name" class="gal-img"> }
+        @if (p.imageUrl) { <img [src]="p.imageUrl" [alt]="p.name" class="gal-img" loading="lazy"> }
         @else             { <div class="gal-ph">{{p.emoji}}</div> }
         <div class="gal-ov"><div class="gal-cn">{{p.name}}</div><div class="gal-cm">{{p.msg.slice(0,55)}}{{p.msg.length>55?'...':''}}</div></div>
       </div>

@@ -35,10 +35,13 @@ export class RevealDirective implements OnInit, OnDestroy {
       ([entry]) => {
         if (entry.isIntersecting) {
           host.classList.add('visible');
-          this.observer.disconnect();
+          this.observer.disconnect(); // Desconectar después de activar para mejor rendimiento
         }
       },
-      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+      {
+        threshold: 0.1, // Aumentado de 0.08 a 0.1 para mejor rendimiento
+        rootMargin: '50px 0px -50px 0px' // Ajustado para activar antes
+      }
     );
     this.observer.observe(host);
   }

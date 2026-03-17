@@ -1,5 +1,14 @@
 
-.inv{position:relative;z-index:10;margin:0 auto;text-align:center}
+/* Optimizar rendimiento de scroll */
+.inv {
+  position: relative;
+  z-index: 10;
+  margin: 0 auto;
+  text-align: center;
+  /* Optimizar composición de capas */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
 
 /* nombres — dorado fijo sin shimmer */
 .names-sec {
@@ -37,9 +46,9 @@
   font-weight:700;letter-spacing:3px;line-height:1;
   color:var(--gold);
   display:block;
-  animation:nameGlow 4s ease-in-out infinite;
+  animation:nameGlow 6s ease-in-out infinite; /* Reducido de 4s a 6s */
 }
-.amp{font-family:'Playfair Display',serif;font-size:clamp(28px,6vw,58px);font-style:italic;color:var(--gold);opacity:.65;margin:10px 0;animation:ampFloat 4s ease-in-out infinite}
+.amp{font-family:'Playfair Display',serif;font-size:clamp(28px,6vw,58px);font-style:italic;color:var(--gold);opacity:.65;margin:10px 0;animation:ampFloat 8s ease-in-out infinite} /* Reducido de 4s a 8s */
 .names-sub{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:var(--slate);letter-spacing:2px;margin-top:14px}
 
 /* detalles */
@@ -83,7 +92,7 @@
 .footer-s{margin-top:56px;padding-top:32px;border-top:1px solid rgba(200,169,110,.25)}
 .ft-deco{font-family:'Cinzel',serif;font-size:10px;color:var(--gold);opacity:.5;letter-spacing:10px;margin-bottom:14px}
 .ft-note{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:var(--text-s);margin-bottom:10px}
-.ft-hearts{font-size:14px;color:var(--gold);opacity:.58;letter-spacing:10px;animation:ampFloat 2.5s ease-in-out infinite}
+.ft-hearts{font-size:14px;color:var(--gold);opacity:.58;letter-spacing:10px;animation:ampFloat 6s ease-in-out infinite} /* Reducido de 2.5s a 6s */
 
 @media(max-width:600px){
   // .inv{padding:44px 20px 80px}

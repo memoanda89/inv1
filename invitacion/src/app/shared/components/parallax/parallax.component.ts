@@ -1,5 +1,6 @@
 
 import { Component, Input, ElementRef, ViewChild, AfterViewInit, OnDestroy } from '@angular/core';
+
 @Component({
   selector: 'app-parallax',
   standalone: true,
@@ -26,14 +27,43 @@ export class ParallaxComponent implements AfterViewInit, OnDestroy {
   @Input() fallback = 'var(--bg2)';
   @ViewChild('bg') bgRef!: ElementRef<HTMLDivElement>;
 
-  ngAfterViewInit() { this.onScroll(); window.addEventListener('scroll', this.onScroll, { passive: true }); }
-  readonly onScroll = () => {
+  private ticking = false;
+  private animationId?: number;
+
+  ngAfterViewInit() {
+    // Usar requestAnimationFrame para throttling
+    window.addEventListener('scroll', this.onScrollThrottled, { passive: true });
+    // Ejecutar una vez para posicionar inicial
+    this.updateParallax();
+  }
+
+  private readonly onScrollThrottled = () => {
+    if (!this.ticking) {
+      this.ticking = true;
+      this.animationId = requestAnimationFrame(() => {
+        this.updateParallax();
+        this.ticking = false;
+      });
+    }
+  };
+
+  private updateParallax() {
     const bg = this.bgRef?.nativeElement;
     const wrap = bg?.parentElement;
     if (!bg || !wrap) return;
+
     const r = wrap.getBoundingClientRect();
-    const ratio = (window.innerHeight - r.top) / (window.innerHeight + r.height);
-    bg.style.transform = `translateY(${(ratio - .5) * 70}px)`;
-  };
-  ngOnDestroy() { window.removeEventListener('scroll', this.onScroll); }
+    // Solo calcular si el elemento está visible en pantalla (con margen)
+    if (r.bottom > -100 && r.top < window.innerHeight + 100) {
+      const ratio = (window.innerHeight - r.top) / (window.innerHeight + r.height);
+      bg.style.transform = `translateY(${(ratio - .5) * 70}px)`;
+    }
+  }
+
+  ngOnDestroy() {
+    window.removeEventListener('scroll', this.onScrollThrottled);
+    if (this.animationId) {
+      cancelAnimationFrame(this.animationId);
+    }
+  }
 }
