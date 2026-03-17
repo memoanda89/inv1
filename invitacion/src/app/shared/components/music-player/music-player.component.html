@@ -1,10 +1,10 @@
 
 <audio #audio [src]="src" loop preload="none"></audio>
 <div class="mfab">
-  @if (showHint() && !playing()) {
+  <!-- @if (showHint() && !playing()) {
     <div class="mfab-hint">🎵 Golden Hour · JVKE</div>
-  }
-  @if (showPanel()) {
+  } -->
+  <!-- @if (showPanel()) {
     <div class="mfab-panel">
       <div class="mfab-row">
         <div class="mfab-disc" [class.spin]="playing()">🎵</div>
@@ -20,7 +20,7 @@
         <span class="mfab-vol-val">{{volume()}}%</span>
       </div>
     </div>
-  }
+  } -->
   <button class="mfab-btn" [class.playing]="playing()" (click)="toggle()">
     @if (playing()) {
       <div class="mfab-eq"><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>

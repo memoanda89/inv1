@@ -1,8 +1,32 @@
 
-.inv{position:relative;z-index:10;max-width:720px;margin:0 auto;padding:70px 44px 100px;text-align:center}
+.inv{position:relative;z-index:10;margin:0 auto;text-align:center}
 
 /* nombres — dorado fijo sin shimmer */
-.names-sec{margin-bottom:44px}
+.names-sec {
+/* Romper el contenedor padre y tomar 100vw */
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  background-image: url('/assets/fotos/foto-3.jpg');
+  background-size: cover;
+  background-position: center;
+  
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(232, 237, 242, 0.35);
+    z-index: 0;
+  }
+  > * { position: relative; z-index: 1; }
+}
 .eyebrow{font-family:'Cinzel',serif;font-size:8px;letter-spacing:9px;color:var(--slate);opacity:.75;text-transform:uppercase;margin-bottom:16px}
 .ring-div{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:20px}
 .ln{flex:1;max-width:80px;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,110,.55),transparent)}
@@ -62,7 +86,7 @@
 .ft-hearts{font-size:14px;color:var(--gold);opacity:.58;letter-spacing:10px;animation:ampFloat 2.5s ease-in-out infinite}
 
 @media(max-width:600px){
-  .inv{padding:44px 20px 80px}
+  // .inv{padding:44px 20px 80px}
   .details{flex-direction:column;align-items:center} .d-sep{display:none}
   .msg-s{padding:28px 18px}
 }
