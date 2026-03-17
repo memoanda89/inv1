@@ -25,6 +25,10 @@
     "@angular/cli": "^18.0.0",
     "@angular/compiler-cli": "^18.0.0",
     "angular-cli-ghpages": "^3.0.2",
+    "imagemin": "^9.0.1",
+    "imagemin-jpegtran": "^8.0.0",
+    "imagemin-pngquant": "^10.0.0",
+    "sharp": "^0.34.5",
     "typescript": "~5.4.2"
   }
 }
