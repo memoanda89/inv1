@@ -52,7 +52,7 @@ export class WeddingService {
   ];
 
   readonly bankAccount: BankAccount = {
-    bank: 'BBVA México', holder: 'Santiago García',
+    bank: 'BBVA México', holder: 'Sandy García',
     clabe: '012345678901234567', concept: 'Boda S&V'
   };
 

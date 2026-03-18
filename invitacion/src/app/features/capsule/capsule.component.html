@@ -2,7 +2,7 @@
 <section class="isec" appReveal="flip">
   <div class="isec-head">
     <div class="isec-icon cp-ico">⏳</div>
-    <div class="isec-info"><div class="isec-t">Cápsula del tiempo</div><div class="isec-s">Santiago &amp; Valentina la abren en su primer aniversario</div></div>
+    <div class="isec-info"><div class="isec-t">Cápsula de los deseos</div><div class="isec-s">Sandy &amp; Memo la abren en su primer aniversario</div></div>
     <div class="isec-badge ib-blue">{{msgs().length}} mensajes</div>
   </div>
   <div class="isec-body">
@@ -18,8 +18,7 @@
       </div>
       <label class="field-label">Tu nombre</label>
       <input class="field" [(ngModel)]="name" placeholder="¿Quién escribe?" style="margin-bottom:12px">
-      <label class="field-label">Tu mensaje — lo leerán el 20 sept 2026</label>
-      <textarea class="field" [(ngModel)]="msg" rows="4" placeholder="Escribe algo que recuerden en un año..." style="margin-bottom:14px;resize:none"></textarea>
+       <textarea class="field" [(ngModel)]="msg" rows="4" placeholder="Escribe algo que recuerden en un año..." style="margin-bottom:14px;resize:none"></textarea>
       <button class="btn btn-navy" (click)="submit()" style="width:100%">Sellar mi mensaje ✦</button>
     }
     @if(tab()==='video'){
@@ -33,5 +32,5 @@
       <button class="btn btn-navy" style="width:100%">Subir mi video ✦</button>
     }
   </div>
-  <div class="cp-lock"><span style="font-size:24px">🔐</span><div><div class="cp-lt">SE ABRE EL 20 DE SEPTIEMBRE, 2026</div><div class="cp-ls">Todo sellado hasta el primer aniversario de Santiago &amp; Valentina</div></div></div>
+  <div class="cp-lock"><span style="font-size:24px">🔐</span><div><div class="cp-lt">SE ABRE EL 20 DE SEPTIEMBRE, 2026</div><div class="cp-ls">Todo sellado hasta el primer aniversario de Sandy &amp; memo</div></div></div>
 </section>

@@ -23,7 +23,7 @@ export class WeddingConfigService {
     time:         '5:00 PM',
     rsvpDeadline: '1° de Septiembre de 2026',
     mapEmbedUrl:  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3727.22!2d-100.7430!3d20.9145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842b54a4cc80a7e9%3A0x5a1b4e2f3e1a9d2!2sSan%20Miguel%20de%20Allende!5e0!3m2!1ses!2smx!4v1700000000000',
-    siteUrl:      'https://santiago-valentina.vercel.app',
+    siteUrl:      'https://Sandy-memo.vercel.app',
   };
 
   // ── Nombres de los padres ─────────────────────────────────────────────────
@@ -47,22 +47,22 @@ export class WeddingConfigService {
   ];
 
   readonly bankAccount = {
-    bank: 'BBVA México', holder: 'Santiago García',
+    bank: 'BBVA México', holder: 'Sandy García',
     clabe: '012345678901234567', concept: 'Boda S&V',
   };
 
   readonly demoGallery: GalleryPhoto[] = [
     { id:1, emoji:'🌸', name:'María González', msg:'Los conocí en la universidad y supe que eran el uno para el otro desde el primer día. ¡Los quiero mucho!' ,imageUrl:'assets/fotos/foto-1.jpg'},
-    { id:2, emoji:'💐', name:'Carlos Herrera',  msg:'Santiago es mi mejor amigo desde la prepa. Valentina, gracias por hacerlo tan feliz.' ,imageUrl:'assets/fotos/foto-2.jpg'},
+    { id:2, emoji:'💐', name:'Carlos Herrera',  msg:'Sandy es mi mejor amigo desde la prepa. memo, gracias por hacerlo tan feliz.' ,imageUrl:'assets/fotos/foto-2.jpg'},
     { id:3, emoji:'🥂', name:'Ana Martínez',    msg:'Fui testigo de su primer beso y hoy soy testigo de este momento tan especial.' ,imageUrl:'assets/fotos/foto-3.jpg'},
     { id:4, emoji:'📸', name:'Roberto García',  msg:'Ver a mi hijo tan feliz es el mejor regalo que la vida me pudo dar.' ,imageUrl:'assets/fotos/foto-1.jpg'},
   ];
 
   // ── Canciones demo para la playlist ──────────────────────────────────────
   readonly songs: Song[] = [
-    { id:1,  name:'Perfect',                   artist:'Ed Sheeran',             dur:'4:23', emoji:'🎸', added:true,  by:'Santiago' },
-    { id:2,  name:'Die With A Smile',           artist:'Lady Gaga & Bruno Mars', dur:'4:11', emoji:'🎤', added:true,  by:'Valentina' },
-    { id:3,  name:'Golden Hour',                artist:'JVKE',                   dur:'3:26', emoji:'🎹', added:true,  by:'Santiago' },
+    { id:1,  name:'Perfect',                   artist:'Ed Sheeran',             dur:'4:23', emoji:'🎸', added:true,  by:'Sandy' },
+    { id:2,  name:'Die With A Smile',           artist:'Lady Gaga & Bruno Mars', dur:'4:11', emoji:'🎤', added:true,  by:'memo' },
+    { id:3,  name:'Golden Hour',                artist:'JVKE',                   dur:'3:26', emoji:'🎹', added:true,  by:'Sandy' },
     { id:4,  name:'A Thousand Years',           artist:'Christina Perri',        dur:'4:45', emoji:'🎵', added:true,  by:'Ana M.' },
     { id:5,  name:'Lover',                      artist:'Taylor Swift',            dur:'3:41', emoji:'🎵', added:false, by:'' },
     { id:6,  name:'All of Me',                  artist:'John Legend',             dur:'4:29', emoji:'🎹', added:false, by:'' },
@@ -88,8 +88,8 @@ export class WeddingConfigService {
   // ── Cápsula del tiempo — mensajes demo ────────────────────────────────────
   readonly demoCapsule: CapsuleMessage[] = [
     { name:'María González', date:'20 sept, 2025', text:'En un año van a leer esto y van a sonreír recordando lo nerviosos que estaban hoy.', type:'text' },
-    { name:'Carlos Herrera', date:'20 sept, 2025', text:'Santiago, cuando leas esto ya llevas un año casado. Eres mi mejor amigo.',           type:'text' },
-    { name:'Ana Martínez',   date:'20 sept, 2025', text:'Valentina, ¡lo lograste! Hoy empiezas la aventura más bonita de tu vida.',           type:'video' },
+    { name:'Carlos Herrera', date:'20 sept, 2025', text:'Sandy, cuando leas esto ya llevas un año casado. Eres mi mejor amigo.',           type:'text' },
+    { name:'Ana Martínez',   date:'20 sept, 2025', text:'memo, ¡lo lograste! Hoy empiezas la aventura más bonita de tu vida.',           type:'video' },
   ];
 
   // ── Consejos demo ─────────────────────────────────────────────────────────

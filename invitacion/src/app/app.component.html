@@ -18,14 +18,14 @@
       <p class="names-sub">Celebran su unión en matrimonio</p>
     </section>
 
-    <!-- PARALLAX 1 -->
+    <!-- PARALLAX 1
     <app-parallax imageUrl="assets/fotos/foto-3.jpg" [height]="440">
       
       <div class="par-line"></div>
       <div class="par-title">{{ cfg.config.brideName }} &amp; {{ cfg.config.groomName }}</div>
       <div class="par-sub">Un amor que merece ser celebrado</div>
      
-    </app-parallax>
+    </app-parallax> -->
 
     <!-- DETALLES -->
     <section class="details" appReveal>
@@ -61,7 +61,7 @@
 
     <!-- GALERÍA DE FOTOS -->
     <section class="gall-s" appReveal>
-      <div class="sec-title">Nuestra Historia en Fotos</div>
+      <div class="sec-title">Sesión de Fotos</div>
       <div class="gall-main" (click)="nextSlide()">
         @for(p of cfg.photos; track $index; let i=$index){
            <div class="slide" [class.on]="curSlide===i"
@@ -96,16 +96,14 @@
     <app-weather></app-weather>
 
     <!-- PARALLAX 3 -->
-    <app-parallax imageUrl="assets/fotos/principal.jpg" [height]="360">
+    <app-parallax  [height]="360" fallback="var(--bg2)">
       <div class="par-tag">Mesa de regalos</div>
       <div class="par-line"></div>
       <div class="par-title">Con todo nuestro amor</div>
       <div class="par-sub">Tu presencia ya es el regalo más grande</div>
     </app-parallax>
 
-    <!-- REGALOS -->
-    <app-gifts></app-gifts>
-
+ 
     <!-- HOTELES -->
     <app-hotels></app-hotels>
 
