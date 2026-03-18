@@ -21,8 +21,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
-  background-image: url('assets/fotos/foto-3.jpg');
+  background-image: url('/assets/fotos/foto-3.jpg');
   background-attachment: fixed; /* Mejor rendimiento en desktop */
   background-size: cover;
   background-position: center;
@@ -115,7 +114,7 @@
 
     /* Fallback para cuando la imagen no carga */
     background: linear-gradient(135deg, var(--bg2) 0%, var(--bg3) 100%);
-    background-image: url('assets/fotos/foto-3.jpg'), linear-gradient(135deg, var(--bg2) 0%, var(--bg3) 100%);
+    background-image: url('/assets/fotos/foto-3.jpg'), linear-gradient(135deg, var(--bg2) 0%, var(--bg3) 100%);
     background-blend-mode: normal;
   }
 }
