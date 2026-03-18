@@ -64,10 +64,13 @@
       <div class="sec-title">Nuestra Historia en Fotos</div>
       <div class="gall-main" (click)="nextSlide()">
         @for(p of cfg.photos; track $index; let i=$index){
-          <div class="slide" [class.on]="curSlide===i">
-            <div class="slide-deco">{{p.icon}}</div>
-            <span class="slide-lbl">{{p.label}}</span>
-          </div>
+           <div class="slide" [class.on]="curSlide===i"
+              [style.backgroundImage]="p.imageUrl ? 'url(' + p.imageUrl + ')' : ''"
+              [style.backgroundSize]="'cover'"
+              [style.backgroundPosition]="'center'">
+              <div class="slide-deco">{{p.icon}}</div>
+              <span class="slide-lbl">{{p.label}}</span>
+            </div>
         }
         <div class="gall-nav">
           <button class="nav-b" (click)="$event.stopPropagation(); prevSlide()">&#8249;</button>
