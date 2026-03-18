@@ -22,7 +22,8 @@
   align-items: center;
   justify-content: center;
   
-  background-image: url('/assets/fotos/foto-3.jpg');
+  background-image: url('assets/fotos/foto-3.jpg');
+  background-attachment: fixed; /* Mejor rendimiento en desktop */
   background-size: cover;
   background-position: center;
   
@@ -72,7 +73,14 @@
 /* galería de fotos */
 .gall-s{margin:40px 0}
 .gall-main{position:relative;overflow:hidden;height:300px;background:var(--bg2);border:1px solid var(--bg3);cursor:pointer;margin-bottom:14px;box-shadow:0 4px 20px rgba(74,107,138,.08)}
-.gall-main::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(232,237,242,.9) 100%);z-index:2;pointer-events:none}
+.gall-main::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  // background: linear-gradient(to bottom, transparent 55%, rgba(232,237,242,.9) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
 .slide{position:absolute;inset:0;opacity:0;transition:opacity .9s;display:flex;align-items:flex-end;padding:20px 24px}
 .slide.on{opacity:1}
 .slide:nth-child(1){background:#dde4eb radial-gradient(ellipse at 30% 50%,rgba(176,196,216,.4),transparent 60%)}
@@ -98,4 +106,16 @@
   // .inv{padding:44px 20px 80px}
   .details{flex-direction:column;align-items:center} .d-sep{display:none}
   .msg-s{padding:28px 18px}
+
+  /* Optimizar imagen de fondo en móviles */
+  .names-sec {
+    background-attachment: scroll; /* Mejor rendimiento en móviles */
+    background-size: cover; /* Asegurar que cubra bien */
+    min-height: 100vh; /* Mantener altura completa */
+
+    /* Fallback para cuando la imagen no carga */
+    background: linear-gradient(135deg, var(--bg2) 0%, var(--bg3) 100%);
+    background-image: url('assets/fotos/foto-3.jpg'), linear-gradient(135deg, var(--bg2) 0%, var(--bg3) 100%);
+    background-blend-mode: normal;
+  }
 }
