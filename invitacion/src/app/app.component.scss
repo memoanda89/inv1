@@ -107,14 +107,11 @@
   .msg-s{padding:28px 18px}
 
   /* Optimizar imagen de fondo en móviles */
-  .names-sec {
-    background-attachment: scroll; /* Mejor rendimiento en móviles */
-    background-size: cover; /* Asegurar que cubra bien */
-    min-height: 100vh; /* Mantener altura completa */
-
-    /* Fallback para cuando la imagen no carga */
-    background: linear-gradient(135deg, var(--bg2) 0%, var(--bg3) 100%);
-    background-image: url('/assets/fotos/foto-3.jpg'), linear-gradient(135deg, var(--bg2) 0%, var(--bg3) 100%);
-    background-blend-mode: normal;
+ .names-sec {
+    min-height: 100svh;          /* svh = small viewport height, funciona mejor en móvil */
+    background-position: center center;
+    background-size: cover;
+    /* fuerza que la imagen se vea aunque el viewport cambie */
+    background-attachment: scroll; /* en móvil siempre scroll, nunca fixed */
   }
 }
